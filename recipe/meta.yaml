@@ -1,5 +1,5 @@
 {% set name = "gfal2-util" %}
-{% set version = "1.5.3" %}
+{% set version = "1.5.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://gitlab.cern.ch/dmc/gfal2-util/-/archive/v{{ version }}/gfal2-util-v{{ version }}.tar.gz
-  sha256: d6bd5aae8117ff7b14a87d76f4531016b4e600170bafaa8e9d8cbe9f759e04f7
+  sha256: 9693c749de976fbe6da8ff168ced050b01039627bbe98165130ece8e30a04c48
 
 build:
   number: 0
@@ -15,7 +15,7 @@ build:
   script:
     - rm -rf src  # [not py2k]
     - mv src_py3 src  # [not py2k]
-    - "{{ PYTHON }} -m pip install . -vv"
+    - {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -56,7 +56,7 @@ about:
   license: GPL-3.0-only
   license_family: GPL
   license_file: LICENSE
-  summary: 'GFAL2 utility tools'
+  summary: GFAL2 utility tools
   description: |
     simplejson is a simple, fast, complete, correct and extensible
     JSON <https://json.org> encoder and decoder for Python 2.5+ and
