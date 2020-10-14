@@ -10,7 +10,7 @@ source:
   sha256: 9693c749de976fbe6da8ff168ced050b01039627bbe98165130ece8e30a04c48
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   script:
     - rm -rf src  # [not py2k]
