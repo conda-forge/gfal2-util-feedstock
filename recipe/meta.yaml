@@ -1,5 +1,5 @@
 {% set name = "gfal2-util" %}
-{% set version = "1.5.4" %}
+{% set version = "1.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://gitlab.cern.ch/dmc/gfal2-util/-/archive/v{{ version }}/gfal2-util-v{{ version }}.tar.gz
-  sha256: 9693c749de976fbe6da8ff168ced050b01039627bbe98165130ece8e30a04c48
+  sha256: 9522c6b0abf8e0831334a65115df538127bcc02b3fc03f6123935462026e7886
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
   script:
     - rm -rf src  # [not py2k]
