@@ -11,18 +11,16 @@ source:
 
 build:
   number: 0
-  skip: true  # [win]
+  noarch: python
   script:
-    - rm -rf src  # [not py2k]
-    - mv src_py3 src  # [not py2k]
     - {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python
+    - python >=2.7
     - pip
   run:
-    - python
+    - python >=2.7
     - python-gfal2
 
 test:
@@ -58,11 +56,9 @@ about:
   license_file: LICENSE
   summary: GFAL2 utility tools
   description: |
-    simplejson is a simple, fast, complete, correct and extensible
-    JSON <https://json.org> encoder and decoder for Python 2.5+ and
-    Python 3.3+. It is pure Python code with no dependencies, but includes
-    an optional C extension for a serious speed boost.
-  doc_url: https://simplejson.readthedocs.io/
+    GFAL 2 utils are a group of command line tools for file manipulations
+    with any protocol managed by gfal2
+  doc_url: https://gitlab.cern.ch/dmc/gfal2-util#list-of-commands
   dev_url: https://gitlab.cern.ch/dmc/gfal2-util/
 
 extra:
