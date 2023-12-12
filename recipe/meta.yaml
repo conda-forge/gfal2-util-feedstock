@@ -1,5 +1,5 @@
 {% set name = "gfal2-util" %}
-{% set version = "1.8.0" %}
+{% set version = "1.8.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://gitlab.cern.ch/dmc/gfal2-util/-/archive/v{{ version }}/gfal2-util-v{{ version }}.tar.gz
-  sha256: 2adefd8f0a1e81b6e91ae7a7f884cf35668c3d1fd9e02e56aaaa5262c8b4655a
+  sha256: 2fe3be4594bc9775c03972136dcde855743c06cb79b28f62da1ec8937c1ddb29
 
 build:
   number: 0
