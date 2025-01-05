@@ -10,17 +10,17 @@ source:
   sha256: 258eee96340b9b564e0ff1a2d064d2da8a170ae5d581a3a417a812f3e125b66f
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script:
     - {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=2.7
+    - python {{ python_min }}
     - pip
   run:
-    - python >=2.7
+    - python >={{ python_min }}
     - python-gfal2
 
 test:
@@ -29,6 +29,8 @@ test:
   #   - test/functional_py3  # [py3k]
   # requires:
   #   - pytest
+  requires:
+    - python {{ python_min }}
   imports:
     - gfal2_util
   commands:
